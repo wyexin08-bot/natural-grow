@@ -1,5 +1,7 @@
 {
-  "name": "",
-  "description": "",
-  "requestFramePermissions": []
+  "name": "Luminous Color Test",
+  "description": "Korean personal color test and wardrobe styling app.",
+  "requestFramePermissions": [
+    "camera"
+  ]
 }
