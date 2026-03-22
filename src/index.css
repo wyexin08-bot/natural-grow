@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+  --color-primary: #665881;
+  --color-primary-container: #deccfd;
+  --color-on-primary: #fef7ff;
+  --color-on-primary-container: #50426a;
+  --color-secondary: #71595c;
+  --color-secondary-container: #fbdbde;
+  --color-on-secondary-container: #634c4f;
+  --color-surface: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f4;
+  --color-surface-container-high: #e6e9e9;
+  --color-on-surface: #2f3334;
+  --color-on-surface-variant: #5b6061;
+  --color-outline: #777b7c;
+  --color-outline-variant: #afb3b3;
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.luminous-card {
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(102, 88, 129, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.luminous-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 40px rgba(222, 204, 253, 0.2);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Hide scrollbar for clean UI */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
